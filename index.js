@@ -33,7 +33,6 @@ var strategy = function(){
           setTimeout(strategy,20000);
       })
     .catch(error => console.error)
-
     }
 
     else if(price > ma && hasPosition){
@@ -56,8 +55,6 @@ var strategy = function(){
     }
   })
 });
-
-
 }
 
 strategy();
