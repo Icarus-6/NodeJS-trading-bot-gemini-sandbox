@@ -2,7 +2,6 @@ const CryptoCompareAPI = require ("cryptocompare");
 const CCAPIKey = "d2f8b560cb20ecd571110a98f038c28ece3e64dd3692daa5b746b9bc537e027c";
 CryptoCompareAPI.setApiKey(CCAPIKey);
 
-
       module.exports = {
 
         minutelyMovingAverage:function(cryptoAsset, fiatCurrency, minutes, callback){
@@ -60,7 +59,9 @@ CryptoCompareAPI.setApiKey(CCAPIKey);
         }
 
       }
-/*  // 1. get data from cryptocompare
+
+
+/*  Logic: 1. get data from cryptocompare
   CryptoCompareAPI.histoMinute(cryptoAsset, fiatCurrency)
   .then(data => {
     data = data.reverse();
@@ -69,7 +70,7 @@ CryptoCompareAPI.setApiKey(CCAPIKey);
     sum+=data[i].close;
     }
 
-  // 2. calculate MA from 100 past hours
+  2. calculate MA from 100 past hours
     var movingAverage = sum/minutes;
     callback(movingAverage);
     })
